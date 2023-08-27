@@ -75,7 +75,7 @@ const HeroesAddForm = () => {
                     name="text"
                     className="form-control"
                     id="text"
-                    placeholder="Что я умею?"
+                    placeholder="Що я вмію?"
                     style={{ "height": '130px' }}
                     value={heroDescr}
                     onChange={(e) => setHeroDescr(e.target.value)} />

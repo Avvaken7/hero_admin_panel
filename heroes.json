@@ -9,7 +9,7 @@
     {
       "id": 2,
       "name": "Невідомий герой",
-      "description": "Той, що ховається в тіні",
+      "description": "Той, що ховається у тіні",
       "element": "wind"
     },
     {
@@ -23,13 +23,13 @@
     {
       "id": "all",
       "name": "all",
-      "label": "Все",
+      "label": "Всі",
       "className": "btn-outline-dark"
     },
     {
       "id": "fire",
       "name": "fire",
-      "label": "Огонь",
+      "label": "Вогонь",
       "className": "btn-danger"
     },
     {
@@ -41,7 +41,7 @@
     {
       "id": "wind",
       "name": "wind",
-      "label": "Ветер",
+      "label": "Вітер",
       "className": "btn-success"
     },
     {
