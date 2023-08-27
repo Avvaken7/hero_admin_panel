@@ -27,7 +27,7 @@ const HeroesAddForm = () => {
         }
 
         request("http://localhost:3001/heroes", "POST", JSON.stringify(newHero))
-            .then(res => console.log(res, 'Отправка успешна'))
+            .then(res => console.log(res, 'Відправка успішна!'))
             .then(dispatch(heroCreated(newHero)))
             .catch(err => console.log(err));
 
@@ -38,9 +38,9 @@ const HeroesAddForm = () => {
 
     const renderFilters = (filters, status) => {
         if (status === "loading") {
-            return <option>Загрузка элементов</option>
+            return <option>Завантаження елементів</option>
         } else if (status === "error") {
-            return <option>Ошибка загрузки</option>
+            return <option>Помилка завантаження</option>
         }
 
         if (filters && filters.length > 0) {
@@ -56,20 +56,20 @@ const HeroesAddForm = () => {
     return (
         <form className="border p-4 shadow-lg rounded" onSubmit={onSubmitHandler}>
             <div className="mb-3">
-                <label htmlFor="name" className="form-label fs-4">Имя нового героя</label>
+                <label htmlFor="name" className="form-label fs-4">Ім'я нового героя</label>
                 <input
                     required
                     type="text"
                     name="name"
                     className="form-control"
                     id="name"
-                    placeholder="Как меня зовут?"
+                    placeholder="Як мене звати?"
                     value={heroName}
                     onChange={(e) => setHeroName(e.target.value)} />
             </div>
 
             <div className="mb-3">
-                <label htmlFor="text" className="form-label fs-4">Описание</label>
+                <label htmlFor="text" className="form-label fs-4">Опис</label>
                 <textarea
                     required
                     name="text"
@@ -82,7 +82,7 @@ const HeroesAddForm = () => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="element" className="form-label">Выбрать элемент героя</label>
+                <label htmlFor="element" className="form-label">Обрати елемент героя</label>
                 <select
                     required
                     className="form-select"
@@ -90,12 +90,12 @@ const HeroesAddForm = () => {
                     name="element"
                     value={heroElement}
                     onChange={(e) => setHeroElement(e.target.value)}>
-                    <option value="">Я владею элементом...</option>
+                    <option value="">Я володію елементом...</option>
                     {renderFilters(filters, filtersLoadingStatus)}
                 </select>
             </div>
 
-            <button type="submit" className="btn btn-primary">Создать</button>
+            <button type="submit" className="btn btn-primary">Створити</button>
         </form>
     )
 }
