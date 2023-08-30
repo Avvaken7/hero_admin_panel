@@ -13,7 +13,7 @@ export const filteredHeroes = createAsyncThunk(
     'filters/filteredHeroes',
     async () => {
         const { request } = useHttp();
-        return await request('http://localhost:3001/filters');
+        return await request('https://hero-admin-panel-iota.vercel.app/filters');
     }
 )
 
