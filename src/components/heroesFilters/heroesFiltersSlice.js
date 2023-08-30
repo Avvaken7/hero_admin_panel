@@ -13,7 +13,7 @@ export const filteredHeroes = createAsyncThunk(
     'filters/filteredHeroes',
     async () => {
         const { request } = useHttp();
-        return await request(process.env.VERCEL_URL + 'filters');
+        return await request(`${process.env.VERCEL_URL}/filters`);
     }
 )
 
