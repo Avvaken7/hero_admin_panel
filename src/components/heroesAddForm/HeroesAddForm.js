@@ -27,7 +27,7 @@ const HeroesAddForm = () => {
         }
 
         // request("http://localhost:3001/heroes", "POST", JSON.stringify(newHero))
-        request("https://hero-admin-panel-iota.vercel.app/heroes", "POST", JSON.stringify(newHero))
+        request(process.env.VERCEL_URL + '/heroes', "POST", JSON.stringify(newHero))
             .then(res => console.log(res, 'Відправка успішна!'))
             .then(dispatch(heroCreated(newHero)))
             .catch(err => console.log(err));

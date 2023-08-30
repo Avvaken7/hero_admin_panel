@@ -11,7 +11,7 @@ export const fetchHeroes = createAsyncThunk(
     'heroes/fetchHeroes',
     async () => {
         const { request } = useHttp();
-        return await request('https://hero-admin-panel-iota.vercel.app/heroes');
+        return await request(process.env.VERCEL_URL + '/heroes');
     }
 )
 
