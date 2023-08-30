@@ -2,19 +2,12 @@
     "version": 2,
     "builds": [
         {
-            "src": "heroes.json",
             "use": "@vercel/node",
             "config": {
                 "includeFiles": [
                     "heroes.json"
                 ]
             }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "heroes.json"
         }
     ]
 }
