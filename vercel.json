@@ -1,14 +1,14 @@
 {
-    "version": 2,
-    "builds": [
+    "functions": {
+        "server.js": {
+            "memory": 1024,
+            "includeFiles": "heroes.json"
+        }
+    },
+    "rewrites": [
         {
-            "src": "server.js",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [
-                    "heroes.json"
-                ]
-            }
+            "source": "/(.*)",
+            "destination": "server.js"
         }
     ]
 }
